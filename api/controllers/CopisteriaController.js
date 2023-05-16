@@ -39,7 +39,7 @@ module.exports = {
     let amarillo = req.body.amarillo;
     let magenta = req.body.magenta;
 
-    // Realizar la actualización de la impresora
+    // Realiza la actualización de la impresora
     Copisteria.updateOne({ id: impresoraId })
       .set({ negro, cian, amarillo, magenta })
       .exec(function (err, updatedImpresora) {
