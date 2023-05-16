@@ -92,10 +92,18 @@
       </div>
       <div class="row">
         <div class="toner">
-          <div class="tinta" style="background-color:black">${impresora.negro}%</div>
-          <div class="tinta" style="background-color:yellow">${impresora.amarillo}%</div>
-          <div class="tinta" style="background-color:cyan">${impresora.cian}%</div>
-          <div class="tinta" style="background-color:magenta">${impresora.magenta}%</div>
+          <div class="tinta" style="background-color:black">${impresora.negro.toFixed(
+            2
+          )}%</div>
+          <div class="tinta" style="background-color:yellow">${impresora.amarillo.toFixed(
+            2
+          )}%</div>
+          <div class="tinta" style="background-color:cyan">${impresora.cian.toFixed(
+            2
+          )}%</div>
+          <div class="tinta" style="background-color:magenta">${impresora.magenta.toFixed(
+            2
+          )}%</div>
         </div>
       </div>
       <div class="row">
@@ -148,10 +156,10 @@
           impcola.removeChild(listaItems[0]);
 
           arrData.forEach((impresora) => {
-            impresora.negro -= palabra.length * 1.2;
-            impresora.amarillo -= palabra.length * 0.2;
-            impresora.cian -= palabra.length * 0.5;
-            impresora.magenta -= palabra.length * 0.7;
+            (impresora.negro -= palabra.length * 1.2).toFixed(2);
+            (impresora.amarillo -= palabra.length * 0.2).toFixed(2);
+            (impresora.cian -= palabra.length * 0.5).toFixed(2);
+            (impresora.magenta -= palabra.length * 0.7).toFixed(2);
           });
         }
 
